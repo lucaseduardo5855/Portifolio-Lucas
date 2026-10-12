@@ -1,12 +1,45 @@
-# Template - Tutorial Portfólio 2023
+# Portfólio — Lucas Eduardo
 
-![image](https://github.com/gbdev-labs/template-portfolio-tutorial-2023/assets/71772559/ade0ec7a-cb22-4c5c-a4fa-183ab380357e)
+Portfólio pessoal estático feito com HTML, CSS e JavaScript puro. Não há etapa
+de build nem dependências npm.
 
+## Estrutura
 
-Este é um template básico que será usado na [série do YouTube](https://youtube.com/playlist?list=PLY_G6KZ7jlfU41bdaWpTsOnfCC7bmpJcL) para criar um Portfólio com as ferramentas mais recentes de desenvolvimento web. O template inclui o Next.js 13, Tailwind CSS, Hygraph CMS, TypeScript e Framer Motion, que são as tecnologias principais que serão usadas na série.
+- `dist/index.html` — conteúdo e estrutura da página
+- `dist/styles.css` — estilos principais e responsividade
+- `dist/interactive.css` — cards, formulário, tema e interações visuais
+- `dist/script.js` — conteúdo em português/inglês, projetos, stack, tema e formulário
+- `dist/profile-photo.jfif` — foto do perfil
 
-O objetivo deste template é fornecer um ponto de partida para os espectadores que acompanham a série de tutoriais e desejam seguir juntamente com a construção do portfólio. Ele inclui a estrutura básica do projeto e os arquivos necessários para iniciar o desenvolvimento do portfólio.
+## Executar localmente
 
-Ao usar este template, você poderá seguir os tutoriais da série passo a passo e criar um portfólio profissional e impressionante com as mais recentes tecnologias de desenvolvimento web.
+Com Python instalado, execute na raiz do repositório:
 
-[**Projeto final**](https://github.com/GBDev13/portfolio-tutorial-2023)
+```powershell
+py -m http.server 5500 --directory dist
+```
+
+Abra `http://localhost:5500` no navegador. O site também pode ser servido por
+qualquer servidor de arquivos estáticos apontando para `dist`.
+
+## Formulário de contato
+
+O link de e-mail e o formulário abrem uma nova mensagem no Gmail endereçada a
+`lucas.eduardo5855@gmail.com`. No link direto, o assunto já vem preenchido; pelo
+formulário, nome, e-mail, assunto e mensagem também vêm preenchidos.
+
+O Gmail salva essa composição como rascunho enquanto ela não é enviada — isso
+é esperado. A pessoa ainda precisa revisar e clicar em **Enviar** no Gmail. O
+portfólio valida os campos no navegador (obrigatoriedade, formato de e-mail e
+comprimentos mínimo e máximo), mas não envia nem armazena mensagens e não possui
+backend de contato.
+
+## GitHub Pages
+
+O workflow em `.github/workflows/pages.yml` publica o conteúdo de `dist` a cada
+push para a branch `main` e também pode ser iniciado manualmente. No GitHub,
+abra **Settings → Pages** e selecione **GitHub Actions** como origem. Após essa
+configuração, o próximo push para `main` iniciará a publicação.
+
+Fontes e ícones são carregados de serviços externos (Google Fonts e Devicon);
+o layout e os textos continuam disponíveis se esses serviços não carregarem.
